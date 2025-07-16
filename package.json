@@ -4,7 +4,7 @@
   "description": "Build the HTML template with tailwind css.",
   "type": "commonjs",
   "scripts": {
-    "start": "live-server ./public ",
+    "start": "npx tailwindcss -i ./css/main.css -o ./public/build/tailwind.css --watch",
     "build": "postcss css/main.css -o public/assets/css/build/tailwind.css --minify",
     "tailwind": "tailwindcss  -i css/main.css -o public/assets/css/build/tailwind.css --minify  & live-server ./public ",
     "dev": " live-server ./public & postcss css/main.css -o public/assets/css/build/tailwind.css --minify --watch  "
