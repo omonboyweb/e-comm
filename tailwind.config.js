@@ -10,6 +10,8 @@ module.exports = {
         searchborder: "#ebf0ff",
         textWhite: "#22262a",
         usercolor: "#262626",
+        headerbottom: "#fafafb",
+        hovertext: "#40bfff",
       },
     },
   },
