@@ -11,7 +11,8 @@
 
 <body>
     <!-- desktop viewport -->
-    <div class="container m-auto min-w-full px-4 hidden md:flex items-center justify-between py-5">
+    <div
+        class="container  md:max-w-[1298px] md:px-5 m-auto min-w-full px-4 hidden md:flex items-center justify-between py-5 ">
         <!-- Header top  -->
         <div>
             <select name="lang" id="lang" class="border-0 bg-transparent text-textWhite outline-none text-[18px]">
@@ -41,8 +42,8 @@
         </div>
     </div>
     <!-- header mobile viewport -->
-    <div class="header py-5">
-        <div class="container m-auto min-w-full px-4 flex items-center gap-1 md:hidden md:invisible">
+    <div class="header py-5 md:hidden md:invisible">
+        <div class="container m-auto min-w-full px-4 flex items-center gap-1 ">
             <div class="hidden sm:flex cursor-pointer mr-3">
                 <a href="index.html">
                     <img src="./assets/logo.png" alt="logo Image" class="hidden sm:block" /></a>
@@ -59,6 +60,33 @@
             </div>
         </div>
     </div>
+    <!-- hero section -->
+    <main
+        class="p-0 m-0 bg-[url('../assets/banner.png')] md:bg-[url('../assets/desktop-banner.png')] bg-no-repeat bg-cover bg-center">
+        <div class="w-full px-4 flex-col items-center  py-10 lg:max-w-[1298px]">
+            <div class="text-center text-white">
+                <span
+                    class="mb-8 text-[24px] inline-block font-bold text-white w-[200px] md:text-[64px] md:mt-[250px] md:w-[540px]">
+                    Super Flash Sale 50% Off
+                </span>
+                <div class="flex justify-center">
+                    <span id="clock"
+                        class="flex w-[42px] h-[42px] rounded-md bg-white text-textWhite items-center justify-center">09</span>
+                    <span class="flex items-center mx-1">
+                        <img src="./assets/dot.png" alt="Dot" loading="lazy" />
+                    </span>
+                    <span id="minut"
+                        class="flex w-[42px] h-[42px] rounded-md bg-white text-textWhite items-center justify-center">34</span>
+                    <span class="flex items-center mx-1">
+                        <img src="./assets/dot.png" alt="Dot" loading="lazy" />
+                    </span>
+                    <span id="second"
+                        class="flex w-[42px] h-[42px] rounded-md bg-white text-textWhite items-center justify-center">56</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
 </body>
 
 </html>
