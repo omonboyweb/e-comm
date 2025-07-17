@@ -15,6 +15,8 @@ module.exports = {
         cat: "#9098b1",
         cyan: "#ccc",
         red: "#fb7181",
+        bordersearch: "#bcddfe",
+        borderfooter: "#f6f7f8",
       },
     },
   },

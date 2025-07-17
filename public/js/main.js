@@ -1,15 +1,35 @@
 import { getApi } from "./server.js";
 const products = document.querySelector("#products");
+const tab = document.querySelector("#tab");
+const tabItem = document.querySelectorAll("#tabItem");
+
+tab.addEventListener("click", (e) => {
+  const target = e.target.dataset.path;
+  const targetClass = e.target.closest("#tabItem");
+  tabItem.forEach((el) => el.classList.remove("text-hovertext"));
+  targetClass.classList.add("text-hovertext");
+  if (!target) return;
+  if (target === "products") {
+    getData("products");
+  } else if (
+    ["women's clothing", "men's clothing", "jewelery", "electronics"].includes(
+      target
+    )
+  ) {
+    getData("products/category", target);
+  }
+});
+getData("products");
 
 function innerData(data) {
   products.innerHTML = data
     .map((item) => {
       return `
-     <div class="relative bg-white rounded-lg shadow-md pb-[15px]">
+     <div class="relative bg-white flex flex-col justify-between rounded-lg shadow-md pb-[15px] h-[350px] ">
                 <img src="${
                   item.image
-                }" alt="Product Image" class="w-full h-[200px] object-cover mb-4 ">
-                <h3 class="text-[18px] font-bold text-brand mb-2 text-center">${
+                }" alt="Product Image" class="w-full h-[180px] object-contain mb-4 hover:scale-110 transition-all duration-300 ease-out">
+                <h3 class="text-[18px] font-bold text-brand mb-2 text-center h-[30px] overflow-hidden bg-white px-4">${
                   item.title
                 }</h3>
                 <span class="flex justify-center">
@@ -43,7 +63,7 @@ function innerData(data) {
                     <!-- chegirma foizi -->
                     <span class="font-bold text-[14px] text-red">-25% Off</span>
                 </div>
-                <div class="flex gap-3 px-4">
+                <div class="flex gap-3 px-4 items-end mt-auto">
                     <button data-id="${
                       item.id
                     }" class="bascketAd w-full bg-brand text-white py-2 rounded-md hover:bg-hovertext transition-colors">
@@ -59,12 +79,11 @@ function innerData(data) {
     })
     .join("");
 }
-async function getData(path) {
+async function getData(path, path2) {
   try {
-    const res = await getApi(path);
+    const res = await getApi(path, path2);
     innerData(res);
   } catch (error) {
     console.log(error);
   }
 }
-getData("products");
