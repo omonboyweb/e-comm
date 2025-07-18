@@ -4,10 +4,17 @@ const openBasket = document.querySelector(".openBasket");
 const bannerOpen = document.querySelector(".bannerOpen")
 const renderBasket = document.querySelector("#renderBasket")
 import { getStorage, setStorage } from "./storage.js";
-const itemLike = document.querySelector("#itemLike")
+const itemLike = document.querySelector("#itemLike");
+const countBasket = document.querySelector(".count")
 
 const basketArr = getStorage("basket") || [];
 const likeArr = getStorage("wishlist") || [];
+if (basketArr.length <= 0) {
+    countBasket.classList.add("hidden");
+    countBasket.classList.remove("flex")
+} else if (basketArr.length >= 1) {
+    countBasket.textContent = basketArr.length;
+}
 
 function choiseArr(list) {
     bannerNone.classList.add("hidden");
@@ -16,9 +23,10 @@ function choiseArr(list) {
 
     if (list.length <= 0) {
         document.querySelector(".arrLength").classList.remove("hidden");
-    };
+    }
     renderArr(list)
 }
+
 
 itemLike.addEventListener("click", (e) => {
     choiseArr(likeArr);
