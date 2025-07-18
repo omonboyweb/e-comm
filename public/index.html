@@ -29,12 +29,12 @@
                     <img src="./assets/icon-user.svg" alt="User Icon" />
                     <span class="text-[18px] text-usercolor">My profile</span>
                 </div>
-                <div class="inline-block cursor-pointer relative">
+                <div class="inline-block cursor-pointer relative openBasket">
                     <span id="count"
                         class="absolute top-0 r-0 w-4 h-4 bg-red-500 rounded-full  items-center justify-center text-[13px] text-white hidden"></span>
                     <img src="./assets/icon-backet.svg" alt="Backet icon" />
                 </div>
-                <span class="inline-block text-[18px] text-usercolor cursor-pointer">Items</span>
+                <span id="itemLike" class="inline-block text-[18px] text-usercolor cursor-pointer">Items</span>
                 <div class="flex gap-1 items-center cursor-pointer">
                     <span class="text-[18px]cursor-pointer">$ 0.00</span>
                     <img src="./assets/icon-searchD.svg" alt="Search Icon" />
@@ -111,6 +111,19 @@
             </div>
         </div>
     </main>
+    <!-- basket render section  -->
+    <div
+        class="bannerOpen invisible  w-full max-w-[1298px] m-auto px-5 py-10 h-[500px] border-2 border-hovertext relative">
+        <div
+            class="arrLength hidden bg-[url('../assets/emty-basket.png')] bg-no-repeat bg-cover bg-center w-[400px] h-[350px] ml-auto mr-auto justify-center items-center">
+        </div>
+        <button id="closeBtn" class="absolute top-4 right-5">X</button>
+        <div id="renderBasket"
+            class="w-full h-full grid gap-x-6 gap-y-6 [grid-template-columns:repeat(auto-fill,minmax(345px,1fr))] overflow-auto">
+
+        </div>
+
+    </div>
     <!-- category section -->
     <section class="w-full max-w-[1298px] m-auto px-4 py-[35px] md:hidden">
         <div class="flex justify-between items-center">
@@ -265,6 +278,7 @@
     </footer>
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/wishlist.js"></script>
+    <script type="module" src="./js/basketRender.js"></script>
 </body>
 
 </html>

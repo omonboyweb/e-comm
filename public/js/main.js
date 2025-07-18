@@ -65,3 +65,4 @@ async function getData(path, path2) {
     console.log(error);
   }
 }
+

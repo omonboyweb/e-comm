@@ -10,7 +10,7 @@ async function optimalFunc(id, list, storeArr) {
     list.splice(index, 1);
   } else {
     const getId = await getApi("products", id);
-    list.push(getId);
+    list.push({ ...getId, counts: 1 });
   }
   setStorage(storeArr, list);
 }

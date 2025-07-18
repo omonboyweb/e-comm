@@ -502,6 +502,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .absolute {
   position: absolute;
 }
@@ -512,6 +516,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .top-0 {
   top: 0px;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.right-5 {
+  right: 1.25rem;
 }
 
 .m-auto {
@@ -533,6 +545,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
 }
 
 .mt-3 {
@@ -639,6 +659,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 42px;
 }
 
+.h-\[500px\] {
+  height: 500px;
+}
+
+.h-\[350px\] {
+  height: 350px;
+}
+
 .h-\[70px\] {
   height: 70px;
 }
@@ -647,8 +675,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 358px;
 }
 
-.h-\[350px\] {
-  height: 350px;
+.h-\[90px\] {
+  height: 90px;
+}
+
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .h-\[180px\] {
@@ -683,6 +717,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 42px;
 }
 
+.w-\[400px\] {
+  width: 400px;
+}
+
 .w-\[70px\] {
   width: 70px;
 }
@@ -693,6 +731,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[180px\] {
   width: 180px;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .min-w-full {
@@ -733,14 +775,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-1 {
@@ -819,6 +853,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 2.5rem;
 }
 
+.gap-x-6 {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
+.gap-y-6 {
+  row-gap: 1.5rem;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -837,6 +884,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
 .rounded-l-lg {
@@ -872,6 +923,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-searchborder {
   --tw-border-opacity: 1;
   border-color: rgb(235 240 255 / var(--tw-border-opacity));
+}
+
+.border-hovertext {
+  --tw-border-opacity: 1;
+  border-color: rgb(64 191 255 / var(--tw-border-opacity));
 }
 
 .border-accent {
@@ -918,6 +974,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(188 221 254 / var(--tw-bg-opacity));
 }
 
+.bg-rose-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 63 94 / var(--tw-bg-opacity));
+}
+
 .bg-brand {
   --tw-bg-opacity: 1;
   background-color: rgb(34 50 99 / var(--tw-bg-opacity));
@@ -930,6 +991,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-\[url\(\'\.\.\/assets\/banner\.png\'\)\] {
   background-image: url('../assets/banner.png');
+}
+
+.bg-\[url\(\'\.\.\/assets\/emty-basket\.png\'\)\] {
+  background-image: url('../assets/emty-basket.png');
 }
 
 .bg-cover {
@@ -955,6 +1020,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-0 {
   padding: 0px;
+}
+
+.p-\[1px\] {
+  padding: 1px;
 }
 
 .px-4 {
@@ -1020,6 +1089,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-\[27px\] {
   padding-left: 27px;
   padding-right: 27px;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .py-2 {
@@ -1094,6 +1173,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[12px\] {
   font-size: 12px;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
 }
 
 .font-bold {
@@ -1186,6 +1269,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+.\[grid-template-columns\:repeat\(auto-fill\2c minmax\(345px\2c 1fr\)\)\] {
+  grid-template-columns: repeat(auto-fill,minmax(345px,1fr));
+}
+
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -1219,10 +1306,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:flex {
     display: flex;
-  }
-
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:grid-cols-3 {
